@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Informações Pessoais</title>
+    <style>
+        /* Estilo básico da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFwZWwlMjBkZSUyMHBhcmVkZSUyMG9jZWFub3xlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        input[type="text"], input[type="date"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+        }
+
+        input[type="submit"] {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005f6a;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: rgb(122, 122, 122);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Modificar Informações Pessoais</h1>
+</header>
+
+<div class="container">
+    <div class="form-container">
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <p id="nome">Clique para editar seu nome</p>
+
+            <label for="cpf">CPF:</label>
+            <p id="cpf">Clique para editar seu CPF</p>
+
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <p id="data_nascimento">Clique para editar sua data de nascimento</p>
+
+            <label for="endereco">Endereço:</label>
+            <p id="endereco">Clique para editar seu endereço</p>
+
+            <label for="telefone">Telefone:</label>
+            <p id="telefone">Clique para editar seu telefone</p>
+
+            <input type="submit" value="Salvar Informações">
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 Feito por Xandrê. Todos os direitos reservados.</p>
+</div>
+
+<script>
+    const paraNome = document.querySelector("#nome");
+    const paraCpf = document.querySelector("#cpf");
+    const paraDataNascimento = document.querySelector("#data_nascimento");
+    const paraEndereco = document.querySelector("#endereco");
+    const paraTelefone = document.querySelector("#telefone");
+
+    paraNome.addEventListener("click", function() {
+        var nome = prompt("Insira um novo nome");
+        paraNome.textContent = "Nome: " + nome;
+    });
+
+    paraCpf.addEventListener("click", function() {
+        var cpf = prompt("Insira um novo CPF");
+        paraCpf.textContent = "CPF: " + cpf;
+    });
+
+    paraDataNascimento.addEventListener("click", function() {
+        var dataNascimento = prompt("Insira uma nova data de nascimento");
+        paraDataNascimento.textContent = "Data de Nascimento: " + dataNascimento;
+    });
+
+    paraEndereco.addEventListener("click", function() {
+        var endereco = prompt("Insira um novo endereço");
+        paraEndereco.textContent = "Endereço: " + endereco;
+    });
+
+    paraTelefone.addEventListener("click", function() {
+        var telefone = prompt("Insira um novo telefone");
+        paraTelefone.textContent = "Telefone: " + telefone;
+    });
+</script>
+
+</body>
+</html>
